@@ -22,6 +22,8 @@ git add venv3.5 && echo “/venv3.5/” >> .gitignore && git add -f .
 virtualenv --no-site-packages --prompt="(project3.5)" venv3.5
 
 export PATH="/home/student/.pyenv/versions/2.7/bin:$PATH"
+pyenv local 2.7
+pyenv global 2.7
 
 git add venv2.7 && echo “/venv2.7/” >> .gitignore && git add -f .
 virtualenv --no-site-packages --prompt="(project2.7)" venv2.7

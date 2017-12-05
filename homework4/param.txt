@@ -1,0 +1,3 @@
+[common]
+output = print
+interval = 300

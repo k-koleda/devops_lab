@@ -1,7 +1,7 @@
 output=[]
 input=[]
-for _ in range(int(raw_input())):
-    input.append(_)
+for i in range(int(raw_input())):
+    input.append(i)
 for j in input:
     if j == 0:
         output.append(j)

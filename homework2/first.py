@@ -1,14 +1,13 @@
-student = []
-for _ in range(int(raw_input())):
-    name = raw_input()
-    score = float(raw_input())
-    temp = [name, score]
-    student.append(temp)
+i = int(raw_input())
+student = [[str(raw_input()), float(raw_input())] for j in range(i)]
 student.sort(key=lambda x: x[1])
-if student[1][1] == student[2][1]:
-    result = [student[1][0], student[2][0]]
-    result.sort(key=lambda x: x[0])
-    print (result[0])
-    print (result[1])
-else:
-    print (student[1][0])
+for j in range(i):
+    if student[j][1] < student[j+1][1]:
+        if student[j+1][1] == student[j+2][1]:
+            temp = sorted((student[j+1][0], student[j + 2][0]), reverse=False)
+            print temp[0]
+            print temp[1]
+            break
+        else:
+            print student[j + 1][0]
+            break
